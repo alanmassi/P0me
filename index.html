@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>NazoArmy</title>
+		<link rel="icon" type="image/png"  href="images/favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/move.js"></script>
+		<script src="js/count.js"></script>
+	</head>
+	<body>
+		<div class="overlay" id="load">
+			<div class="loading" ></div>
+			<button class="btn-intro" id="btn"> ENTRAR</button>
+		</div>
+		<header class="header">
+			<nav class="menu">
+				<ol>
+					<li>
+						<a class="link" href="#"><img src="images/NazoArmySimplificadoNEGRO.png"alt="logo"></a>
+					</li>
+					<li>
+						<a class="link sho" href="shop/shop.html">Tienda</a>
+					</li>
+				</ol>
+			</nav>
+		</header>
+		<div class="container">	
+			<section class="left">
+				<div class="image-container" id="img-con">
+					<img src="images/Goku_SSJ3_Render.png" id="imageMove"alt="chabon flotando">
+				</div>
+				<div class="countdown-container">
+					<span class="time" id="dias"></span>
+					<div class="point">:</div>
+					<span class="time" id="horas"></span>
+					<div class="point">:</div>
+					<span class="time" id="min"></span>
+					<div class="point">:</div>
+					<span class="time" id="seg"></span>
+				</div>
+				<div class="suscription-container">
+					<form action="/suscripcion/" class="form-email">
+						<input class="box" type="text" placeholder="Déjame tu email" />
+						<div class="btn-con">
+							<button class="btn">Avísame!</button>
+						</div>
+					</form>
+				</div>
+			</section>
+			<section class="right">
+				<div class="feed-twitter">
+					<a class="twitter-timeline" data-width="600" data-height="650" data-theme="dark" data-chrome="nofooter noscrollbar" href="https://twitter.com/p0melaus?ref_src=twsrc%5Etfw">Tweets by p0melaus</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				<div class="social">
+					<div class="text">
+						<h4>Sígueme en:</h4>
+					</div>
+					<div class="social-link facebook">
+						<a><i class="icon-social-facebook"></i></a>
+					</div>
+					<div class="social-link twitter">
+						<a><i class="icon-social-twitter"></i></a>
+					</div>
+					<div class="social-link instagram">
+						<a><i class="icon-instagram"></i></a>
+					</div>
+					<div class="social-link youtube">
+						<a><i class="icon-youtube"></i></a>
+					</div>
+					<div class="social-link twitch">
+						<a><i class="icon-twitch"></i></a>
+					</div>
+				</div>
+			</section>
+			<section class="footer">
+				<span>footer</span>
+				<span>footer</span>
+			</section>
+		</div>
+		<script> //intro
+			const $load = document.getElementById('load');
+			const $btn = document.getElementById('btn');
+			$btn.addEventListener('click', (event)=>{
+				$load.style.display= 'none';
+			});
+		</script>
+	</body>
+</html>
