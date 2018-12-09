@@ -13,8 +13,10 @@
 	</head>
 	<body>
 		<div class="overlay" id="load">
-			<div class="loading" ></div>
-			<button class="btn-intro" id="btn"> ENTRAR</button>
+			<div class="container-load">
+				<img src="images/NazoArmySimplificadoBLANCO.png">
+				<div class="load"></div>	
+			</div>
 		</div>
 		<header class="header">
 			<nav class="menu">
@@ -81,12 +83,13 @@
 				<span>footer</span>
 			</section>
 		</div>
-		<script> //intro
-			const $load = document.getElementById('load');
-			const $btn = document.getElementById('btn');
-			$btn.addEventListener('click', (event)=>{
-				$load.style.display= 'none';
-			});
+		<script> //loading
+			window.onload = function(){
+				var contenedor = document.getElementById('load');
+
+				contenedor.style.visibility = 'hidden';
+				contenedor.style.opacity = '0';
+			}
 		</script>
 	</body>
 </html>
