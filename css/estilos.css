@@ -1,372 +1,458 @@
-            /*
-			purpura claro cb3eff
-			celeste/turkesa 30c6e1
-			purpura oscuro 8201b2
-			negro 000
-			blanco gris tisa e8f3f8
-			blanco fff
-			
-			
-			*/
-			body{
-				width: 100%;
-				margin: 0;
-				padding: 0;
-				background: rgba(0, 0, 0, .7);
-				font-family: 'Noto Sans TC', sans-serif;
-			}
-			.header{
-				width: 100%;
-				height: 70px;
-                position: fixed;
-                z-index: 12;
-				top: 0;
-				left: 0;
-				display: flex;
-				justify-content: space-around;
-				background: rgba(255, 0, 255, 1);
-			}
-			.menu{
-				height: 100%;
-				z-index: 1;
-				width: 100%;
-			}
-			.menu ol{
-				height: 100%;
-				margin: 0;
-				padding: 0 40px;
-				display: flex;
-				list-style-type: none;
-				justify-content: space-between;
-				align-items: center;
-			}
-			.menu li{
-				width: 100px;
-				height: 100%;
-				display: flex;
-				align-items: center;
-			}
-			.link{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 50px;
-				text-decoration: none;
-				color: black;
-				font-weight: 700;   
-            }
-            .sho{
-                border-radius: 10px;
-                border: 1px solid #30c6e1;
-            }
-			.link img{
-				width: 100%;
-				height: 100%;
-			}
-			.container{
-				width: 100%;
-				display: flex;
-				padding-top: 50px;
-				margin: 0;
-			}
-			.left{
-				width: 48%;
-				border-radius: 10px;
-				position: absolute;
-				left: 20px;
-				margin-top: 50px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				background: rgba(232,243,248, .4);
-			}
-			.right{
-				width: 48%;
-				position: absolute;
-				right: 20px;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-			}
-			.image-container{
-				width: 60%;
-				height: 500px;
-				display: flex;
-				background: transparent;
-				justify-content: center;
-				position: relative;
-				box-sizing: border-box;
-			}
-			.image-container img{
-				width: 400px;
-				position: relative;
-				will-change: translate;	
-			}
-			.countdown-container{
-				width: 80%;
-				height: 150px;
-				margin-top: -20px;
-				color: blue;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-size: 50px;
-				position: relative;
-			}
-			.time{
-				padding-left: 10px;
-				padding-right: 10px;
-				margin-right: 5px;
-				border: 1px solid gray;
-				background: black;
-			}
-			.suscription-container{
-				width: 90%;
-				height: 100px;
-				color: white;
-			}
-			.form-email{
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 100%;
-			}
-			.box{
-				width: 350px;
-				height: 46px;
-				margin: 0;
-				padding: 0;
-				padding-left: 5px;
-				font-size: 20px;
-			}
-			.btn-con{
-				width: 90px;
-				padding-right: 10px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			.btn{
-				width: 95px;
-				height: 50px;
-				padding: 0;
-				border: 0;
-				background: rgba(255, 0, 255, 1);
-				font-weight: 800;
-				font-size: 15px;
-			}
-			.btn:active{
-				border:1px solid gba(255, 0, 255, 1);
-				width: 90px;
-				height: 45px;
-				margin-left: 5px; 
-			}
-			.feed-twitter{
-				margin-top: 40px;
-				position: relative;
-				display: flex;
-			}
-			.feed-twitter a{
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-			.social{
-				margin: 50px;
-				justify-content: center;
-				align-items: center;
-				display: flex;
-				width: 100%;
-				height: 60px;
-			}
-			.social-link{
-				width: 50px;
-				height: 50px;
-				margin: 15px;
-				font-size: 50px;
-				display: flex;
-				align-items: center;
-			}
-			.facebook{
-				color: #3A5795;
-				margin-right: 0;
-			}
-			.youtube{
-				color: #CC181E;
-				font-size: 40px;
-			}
-			.twitter{
-				color: #5EA9DD;
-			}
-			.instagram{
-				color: #C08D64;	
-				font-size: 40px;
-			}
-			.twitch{
-				color: #6441A4;
-				font-size: 40px;
-			}
-			.overlay{
-				background: black;
-				height: 100%;
-				width: 100%;
-				position: fixed;
-				-webkit-transition: all 1s ease;
-				-o-transition: all 1s ease;
-				transition: all 1s ease;
-				z-index: 10000;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			.container-load{
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin: auto;
-			}
-			.overlay img{
-				width: 550px;
-				position: absolute;
-				left: 27%;
-				top: 100px;			
-			}
-			.load{
-				border: 15px solid white;
-				border-top-color: #F4266A;
-				border-top-style: groove;
-				height: 70px;
-				width: 70px;
-				border-radius: 100%;
-				position: absolute;
-				left: 45%;
-				top: 400px;
-				margin: auto;
-				animation: girar 1.5s linear infinite;
-			}
-			@keyframes girar{
-			from{transform: rotate(0deg);}
-			to{transform: rotate(360deg);}
-			}
-            .footer{
-                width: 100%;
-                height: 35px;
-                position: fixed;
-                bottom: 0px;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                background: black;
-                color: white;
-            }
-            @media screen and (max-width: 1024px){
-				.left{
-					width: 45%;
-					margin-top: 40px;
-				}
-				.right{
-					width: 45%;
-				}
-                .countdown-container{
-                    font-size: 25px;
-                }
-                .social{
-                    margin-left: 10px;
-                    margin-right: 10px;
-                }
-                .social-link{
-                    width: 35px;
-                    height: 35px;
-                }
-                .youtube{
-                    font-size: 30px;
-                }
-                .instagram{
-                    font-size: 30px;
-                }
-                .twitch{
-                    font-size: 30px;
-                }
-                .box{
-                    height: 40px;
-                }
-                .btn{
-                    width: 80px;
-                }
-            }
-            @media screen and (max-width: 768px){
-                .btn{
-                    height: 40px;
-                    font-size: 12px;
-                }
-                .box{
-                    height: 36px;
-                    font-size: 12px;
-				}
-				.overlay img{
-					left: 15%;		
-				}
-				.load{
-					left: 45%;
-				}
-            }
-            @media screen and (max-width: 480px){
-				.feed-twitter{
-					display: none;
-				}
-				.left{
-					width: 90%;
-					margin-left: 5px;
-					margin-right: 5px;
-				}
-				.countdown-container{
-					top: -300px;
-				}
-				.right{
-					height: 70px;
-				}
-				.social{
-					position: relative;
-					bottom: -540px;
-					left: -115px;
-				}
-				.suscription-container{
-					position: relative;
-					top: -25px;
-				}
-				.overlay img{
-					left: 19%;
-					width: 300px;		
-				}
-				.load{
-					left: 45%;
-					bottom: 300px;
-					width: 50px;
-					height: 50px;
-				}
-            }
-            @media screen and (max-width: 320px){
-				.text{
-					display: none;
-				}
-				.social{
-					left:-70px;	
-					bottom: -530px;
-				}
-				.overlay img{
-					left: 10%;
-					top: 150px;	
-				}
-				.load{
-					left: 40%;
-					bottom: 300px;
-					width: 50px;
-					height: 50px;
-				}
-            }
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?smcfqc');
+    src:  url('../fonts/icomoon.eot?smcfqc#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?smcfqc') format('truetype'),
+      url('../fonts/icomoon.woff?smcfqc') format('woff'),
+      url('../fonts/icomoon.svg?smcfqc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-facebook:before {
+    content: "\e900";
+  }
+  .icon-brand:before {
+    content: "\e900";
+  }
+  .icon-social:before {
+    content: "\e900";
+  }
+  .icon-instagram:before {
+    content: "\e901";
+  }
+  .icon-brand1:before {
+    content: "\e901";
+  }
+  .icon-social1:before {
+    content: "\e901";
+  }
+  .icon-twitter:before {
+    content: "\e902";
+  }
+  .icon-brand2:before {
+    content: "\e902";
+  }
+  .icon-tweet:before {
+    content: "\e902";
+  }
+  .icon-social2:before {
+    content: "\e902";
+  }
+  .icon-youtube:before {
+    content: "\e903";
+  }
+  .icon-brand3:before {
+    content: "\e903";
+  }
+  .icon-social3:before {
+    content: "\e903";
+  }
+  .icon-twitch:before {
+    content: "\e904";
+  }
+  .icon-brand4:before {
+    content: "\e904";
+  }
+  .icon-social4:before {
+    content: "\e904";
+  }
+/*----------------------------------------------------------------loading*/  
+.overlay{
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  
+}
+.overlay img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*----------------------------------------------------------------loading*/
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Fjalla One', sans-serif;
+    overflow: hidden;
+}
+#particles-js{
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/fond.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template: repeat(8, 1fr) / repeat(4, 1fr);
+  grid-template-areas: "header header header header"
+                       "header header header header"
+                       ".   . countdown countdown"
+                       ".		.	countdown countdown"
+                       ".		.	suscription suscription"
+                       ".   . suscription suscription"
+                       ".   . shop        shop"
+                       "footer	footer	footer	footer";
+}
+/*----------------------------------------------------------------header*/
+.header{
+  grid-area: header;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "logo . . social";
+}
+.social{
+  grid-area: social;
+  display: flex;
+  justify-content: center;
+}
+.social-link{
+  width: 60px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 5px 0 5px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: black;
+  border: 1px solid gray;
+  border-top: none;
+}
+.social-link a{
+  text-decoration: none;
+  color:white;
+  font-size: 35px; 
+}
+.social-link a:hover{
+  color: #30c6e1;
+}
+.logo{
+  grid-area: logo;
+  margin-left: 10%;
+  position: relative;
+}
+.logo a img{
+  width: 350px;
+  margin-top: 30px;
+}
+/*----------------------------------------------------------------header*/
+/*-------------------------------------------------------------countdown*/
+.countdown-container{
+  grid-area: countdown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+.content{
+  width: 173px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+.time{
+  width: 150px;
+  height: 150px;
+  border: 3px solid gray;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+}
+h5{
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+/*-------------------------------------------------------------countdown*/
+/*-----------------------------------------------------------suscription*/
+.suscription-container{
+  grid-area: suscription;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1{
+  position: relative;
+  margin: 10px 0 10px;
+  color: rgb(252, 249, 249);
+  font-size: 3em;
+}
+.box{
+  width: 400px;
+  height: 48px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid #cb3eff;
+  border-radius: 5px 0 0 5px;
+}
+.btn{
+  width: 100px;
+  height: 48px;
+  position: relative;
+  border-color: #cb3eff;
+  background: #cb3eff;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 0 5px 5px 0;
+}
+/*-----------------------------------------------------------suscription*/
+/*------------------------------------------------------------------shop*/
+.shop{
+  grid-area: shop;
+  position: relative;
+  padding-left: 12%;
+  top: -5%;
+}
+.shop a{
+  font-size: 2.5em;
+  text-decoration: none;
+  color: #cb3eff;
+}
+.shop a:hover{
+  color: #30c6e1;
+}
+/*------------------------------------------------------------------shop*/
+/*----------------------------------------------------------------footer*/
+.footer-container{
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.footer{
+  width: 100%;
+  padding-left: 20px;
+  color: blue;
+  font-size: 1.5em;
+  background: rgba(0,0,0, .6);
+}
+@media screen and (max-width: 1024px){
+  .logo a img{
+    width: 200px; 
+  }
+  .social-link{
+    width: 30px;
+    height: 90px;
+  }
+  .social-link a{
+    font-size: 15px; 
+  }
+  .content{
+    width: 100px;
+    margin: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .time{
+    width: 70px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  h5{
+    font-size: 1em;
+  }
+  h1{
+    font-size: 1.7em;
+  }
+  .box{
+    width: 200px;
+    height: 38px;
+    font-size: 0.7em;
+  }
+  .btn{
+    width: 65px;
+    height: 38px;
+    font-size: 0.7em;
+  }
+  .shop a{
+    font-size: 1.3em;
+    margin-left: -15px;
+  }
+  .footer{
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 767px){
+  .logo a img{
+    width: 150px; 
+  }
+  
+  .social-link{
+    width: 20px;
+    height: 60px;
+    margin: 0 2px 0 2px;
+    padding-bottom: 3px;
+  }
+  .social-link a{
+    font-size: 12px; 
+  }
+  .content{
+    width: 60px;
+    margin: 10px;
+  }
+  .time{
+    width: 70px;
+    height: 70px;
+    font-size: 1.2em;
+  }
+  h5{
+    font-size: .9em;
+  }
+  h1{
+    font-size: 1.2em;
+  }
+  .box{
+    width: 150px;
+    height: 28px;
+    font-size: 0.7em;
+  }
+  .btn{
+    width: 65px;
+    height: 28px;
+    font-size: 0.7em;
+  }
+  .shop{
+    top: -9%;
+  }
+  .shop a{
+    font-size: 1em;
+    margin-left: -2px;
+  }
+  .footer{
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 480px){
+  #particles-js{
+    width: 100%;
+}
+  .container{
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 0;
+    grid-template-areas: "logo"
+                         "countdown"
+                         "suscription"
+                         "shop"
+                         "social"
+                         "footer";
+  }
+  .logo{
+    grid-area: logo;
+    position: relative;
+    top: -390px;
+    left: 15%;
+  }
+  .logo a img{
+    width: 250px;
+  }
+  .countdown-container{
+    grid-area: countdown;
+    position: relative;
+    right: -230px;
+    top: 150px;
+  }
+  .content{
+    width: 30px;
+    margin: 15px;
+  }
+  .time{
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+  }
+  h5{
+    font-size: .9em;
+  }
+  .suscription-container{
+    grid-area: suscription;
+    position: relative;
+    left: 50px;
+    top: 150px;
+    width: 400px;
+  }
+  .form-email{
+    position: relative;
+    left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .shop{
+    position: relative;
+    top: 165px;
+    left: 217px;
+  }
+  .social-link{
+    grid-area: social;
+    width: 40px;
+    height: 40px;
+    margin: 0 2px 0 2px;
+    border-radius: 5px;
+    padding: 0;
+    align-items: center;
+    position: relative;
+    left: -68%;
+    bottom: -60px;
+    border: 1px solid gray;
+  }
+  .social-link a{
+    font-size: 30px; 
+  }
+  .footer-container{
+    width: 100vw;
+    grid-area: footer;
+    position: relative;
+    bottom: -154px;
+  }
+  .footer p{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 320px){
+}
