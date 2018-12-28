@@ -1,77 +1,4 @@
-@font-face {
-    font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?smcfqc');
-    src:  url('../fonts/icomoon.eot?smcfqc#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?smcfqc') format('truetype'),
-      url('../fonts/icomoon.woff?smcfqc') format('woff'),
-      url('../fonts/icomoon.svg?smcfqc#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .icon-facebook:before {
-    content: "\e900";
-  }
-  .icon-brand:before {
-    content: "\e900";
-  }
-  .icon-social:before {
-    content: "\e900";
-  }
-  .icon-instagram:before {
-    content: "\e901";
-  }
-  .icon-brand1:before {
-    content: "\e901";
-  }
-  .icon-social1:before {
-    content: "\e901";
-  }
-  .icon-twitter:before {
-    content: "\e902";
-  }
-  .icon-brand2:before {
-    content: "\e902";
-  }
-  .icon-tweet:before {
-    content: "\e902";
-  }
-  .icon-social2:before {
-    content: "\e902";
-  }
-  .icon-youtube:before {
-    content: "\e903";
-  }
-  .icon-brand3:before {
-    content: "\e903";
-  }
-  .icon-social3:before {
-    content: "\e903";
-  }
-  .icon-twitch:before {
-    content: "\e904";
-  }
-  .icon-brand4:before {
-    content: "\e904";
-  }
-  .icon-social4:before {
-    content: "\e904";
-  }
+
 /*----------------------------------------------------------------loading*/  
 .overlay{
   background: black;
@@ -107,7 +34,7 @@ body{
     width: 60%;
     height: 100%;
     position: fixed;
-    right: 0;
+    right: 5%;
 }
 .container{
   width: 100%;
@@ -118,8 +45,8 @@ body{
   background-size: cover;
   display: grid;
   grid-template: repeat(8, 1fr) / repeat(4, 1fr);
-  grid-template-areas: "header header header header"
-                       "header header header header"
+  grid-template-areas: "logo .       .      social"
+                       "logo .       .      social"
                        ".   . countdown countdown"
                        ".		.	countdown countdown"
                        ".		.	suscription suscription"
@@ -127,18 +54,12 @@ body{
                        ".   . shop        shop"
                        "footer	footer	footer	footer";
 }
-/*----------------------------------------------------------------header*/
-.header{
-  grid-area: header;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "logo . . social";
-}
+/*----------------------------------------------------------------social*/
 .social{
   grid-area: social;
   display: flex;
   justify-content: center;
+  z-index: 1000;
 }
 .social-link{
   width: 60px;
@@ -146,7 +67,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin: 0 5px 0 5px;
+  margin: 0 1px 0 1px;
   padding-bottom: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -179,6 +100,8 @@ body{
   justify-content: center;
   align-items: center;
   color: gray;
+  position: relative;
+  right: 10px;
 }
 .content{
   width: 173px;
@@ -240,7 +163,7 @@ h1{
 .shop{
   grid-area: shop;
   position: relative;
-  padding-left: 12%;
+  padding-left: 11%;
   top: -5%;
 }
 .shop a{
@@ -270,9 +193,13 @@ h1{
   .logo a img{
     width: 200px; 
   }
+  .social{
+    justify-content: flex-end;
+  }
   .social-link{
     width: 30px;
     height: 90px;
+    
   }
   .social-link a{
     font-size: 15px; 
@@ -306,13 +233,13 @@ h1{
   }
   .shop a{
     font-size: 1.3em;
-    margin-left: -15px;
+    padding-left: 9%;
   }
   .footer{
     font-size: 1em;
   }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
   .logo a img{
     width: 150px; 
   }
@@ -352,7 +279,8 @@ h1{
     font-size: 0.7em;
   }
   .shop{
-    top: -9%;
+    top: -50%;
+    padding-left: 3%;
   }
   .shop a{
     font-size: 1em;
@@ -363,17 +291,14 @@ h1{
   }
 }
 @media screen and (max-width: 480px){
-  #particles-js{
-    width: 100%;
-}
   .container{
     width: 100%;
-    height: 100%;
+    height: autos;
     background: black;
     display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: 0;
+    grid-template: repeat(6, 1fr) 40px / 100%;
     grid-template-areas: "logo"
+                         "logo"
                          "countdown"
                          "suscription"
                          "shop"
@@ -381,78 +306,69 @@ h1{
                          "footer";
   }
   .logo{
-    grid-area: logo;
-    position: relative;
-    top: -390px;
-    left: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
   }
   .logo a img{
-    width: 250px;
+    width: 300px;
+    margin: 0;
+    
   }
   .countdown-container{
-    grid-area: countdown;
-    position: relative;
-    right: -230px;
-    top: 150px;
-  }
-  .content{
-    width: 30px;
-    margin: 15px;
-  }
-  .time{
-    width: 50px;
-    height: 50px;
-    font-size: 1.2em;
-  }
-  h5{
-    font-size: .9em;
+    width: 100%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .suscription-container{
-    grid-area: suscription;
-    position: relative;
-    left: 50px;
-    top: 150px;
-    width: 400px;
-  }
-  .form-email{
-    position: relative;
-    left: -15px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+
+  }
+  .box{
+    width: 230px;
   }
   .shop{
-    position: relative;
-    top: 165px;
-    left: 217px;
+    top:0;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+  }
+  .shop a{
+    padding: 0;
+  }
+  .social{
+    justify-content: center;
+    align-items: center;
   }
   .social-link{
-    grid-area: social;
     width: 40px;
     height: 40px;
-    margin: 0 2px 0 2px;
     border-radius: 5px;
-    padding: 0;
-    align-items: center;
-    position: relative;
-    left: -68%;
-    bottom: -60px;
     border: 1px solid gray;
+    align-items: center;
   }
   .social-link a{
-    font-size: 30px; 
+    font-size: 33px;
   }
   .footer-container{
-    width: 100vw;
-    grid-area: footer;
-    position: relative;
-    bottom: -154px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
   }
-  .footer p{
+  .footer{
+    padding: 0;
     display: flex;
     justify-content: center;
-    width: 100%;
   }
 }
 @media screen and (max-width: 320px){
+  
 }
